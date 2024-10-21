@@ -1,12 +1,11 @@
 /*-- Estilo toda la pagina--*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     color: black;
-    border: 1px red solid;
     max-width: 1400px;
 }
 
@@ -159,50 +158,13 @@ main {
     color: #6c757d;
 }
 
-/* 
-JERARQUIAS POR ORDEN PIRAMIDAL
-!import <= POSTERIOR LLAMADO LUEGO DEL VALOR DE PROPIEDAD.
-id = # <= CLADIFICACIONES TRONCALES E IRREPETIBLES PARA ESTRUCTURAS.
-class = . <= CLASIFICACIONES REUTILIZABLES PARA CAJAS Y ESTILOS.
-etiquetas / selector <= ETIQUETAS SEMANTICAS DE UN HTML5
-*/
-
-/*
-METODOLOGIA CAMEL CASE O BEM:
-
-estoEsUnaMetodologiaCamelCase <= SE USA PARA UN ETIQUETADO RAPIDO, DIRECTO Y ENTENDIBLE.
-
-BEM <= BLOQUE ELEMENTO MODIFICADOR
-
-padre_hijo--elementoModificado <= MEZCLA DE METODOLOGIAS PARA UN ETIQUETADO RAPIDO, DIRECTO Y ENTENDIBLE.
-*/
-
-/*
-Propiedades Margin y Padding
-
-margin: 50px; <= 1 VALOR TODOS SUS LADOS
-
-margin-top: 50px; <= VALOR SUPERIOR O X
-
-
-        TOP/BOTTOM          LEFT/RIGHT
-margin:     50px                30px;
-
-        TOP     RIGHT   BOTTOM      LEFT
-margin: 50px    30px     50px       30px;
-
-border-left:;
-*/
-
-/* /////////////////////////////////// */
-
 /* PAGINA DE SOLUCIONES */
-
 .Solucion1 {
     padding-top: 80px;
     position: sticky;
     top: 0;
     z-index: 10;
+    background-color: white; /* Color de fondo para ocultar el contenido de atrás */
 }
 
 .Solucion2 {
@@ -210,45 +172,64 @@ border-left:;
     position: sticky;
     top: 0;
     z-index: 20;
+    background-color: white; /* Color de fondo */
 }
 
 .Solucion3 {
+    padding-top: 80px;
     position: sticky;
     top: 0;
+    z-index: 30;
+    background-color: white; /* Color de fondo */
 }
 
 .Solucion4 {
+    padding-top: 80px;
     position: sticky;
     top: 0;
+    z-index: 40;
+    background-color: white; /* Color de fondo */
 }
 
 .Solucion5 {
+    padding-top: 80px;
     position: sticky;
     top: 0;
+    z-index: 50;
+    background-color: white; /* Color de fondo */
 }
 
 .Solucion6 {
+    padding-top: 80px;
     position: sticky;
     top: 0;
+    z-index: 60;
+    background-color: white; /* Color de fondo */
 }
-
-
-/* /////////////////////////////////// */
 
 /* PAGINA DE INSUMOS */
 
-/* GRILLAS DE INSUMOS */
+/* Efecto sombreado en las imágenes al pasar el cursor */
+.section__grid img {
+    transition: box-shadow 0.3s ease-in-out;
+}
 
-.section__grid{
+.section__grid img:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    transform: scale(1.05); /* Añadir también un pequeño zoom si lo deseas */
+}
+
+/* GRILLAS DE INSUMOS */
+.section__grid {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 200px);
     grid-template-areas:
-            /*col1*/       /*col2*/     /*col3*/
-    /*fila1*/ "img1          img2       img3"
-    /*fila2*/ "img4          img5       img6"
-    /*fila3*/ "img7          img8       img9"
+        /*col1*/       /*col2*/     /*col3*/
+        /*fila1*/ "img1          img2       img3"
+        /*fila2*/ "img4          img5       img6"
+        /*fila3*/ "img7          img8       img9"
     ;
     column-gap: 20px;
     row-gap: 50px;
@@ -261,64 +242,101 @@ border-left:;
 
 .img1 {
     grid-area: img1;
-
 }
 
 .img2 {
     grid-area: img2;
-
 }
 
 .img3 {
     grid-area: img3;
-
 }
 
 .img4 {
     grid-area: img4;
-
 }
 
 .img5 {
     grid-area: img5;
-
 }
 
 .img6 {
     grid-area: img6;
-
 }
 
 .img7 {
     grid-area: img7;
-
 }
 
 .img8 {
     grid-area: img8;
-
 }
 
 .img9 {
     grid-area: img9;
-
 }
 
-@media (max-width:1200px) {
-     .section__grid {
-            width: 100%;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(3, 200px);
-            grid-template-areas:
+/* Media Queries para la responsividad */
+@media (max-width: 1200px) {
+    .section__grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        grid-template-areas:
             "img1 img2"
             "img3 img4"
             "img5 img6"
             "img7 img8"
             "img9 img9"
-            ;
-     }
+        ;
+    }
 }
 
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto;
+    }
+
+    nav ul {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .imagen-con-texto {
+        flex-direction: column;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .imagen-con-texto img {
+        width: 80%;
+        margin-right: 0;
+    }
+
+    .texto {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .iconos-secciones {
+        flex-direction: column;
+    }
+
+    .icono {
+        margin: 10px 0;
+    }
+}
 
 /* Estilo para la grilla de imágenes con nombres */
 .section__grid figure {
@@ -337,7 +355,6 @@ BREAKPOINTS
 MOVIL: 600px
 TABLET: 800px
 DESKTOP: 1200 y 1400px
-
 */
 
 .media-queries {
@@ -350,7 +367,6 @@ DESKTOP: 1200 y 1400px
 .media-queries img {
     width: 100%;
     height: 300px;
-
 }
 
 .cont-flex {
@@ -359,9 +375,12 @@ DESKTOP: 1200 y 1400px
     height: 100%;
 }
 
-
-@media screen and (min-width:768px) and (max-width: 992px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
     .media-queries {
         background-color: brown;
     }
 }
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* PAGINA DE CONTACTOS */

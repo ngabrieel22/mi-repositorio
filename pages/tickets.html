@@ -1,39 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="icons/icono-logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Sistemas</title>
 </head>
 
 <body>
-    <!--ESTRUCTURA Nº1= HEADER cabecera del sitio que puede contener un NAV-->
+    <!-- ESTRUCTURA Nº1= HEADER cabecera del sitio que puede contener un NAV -->
     <header>
-        <h2>TICKETS</h2> 
+        <h2>TICKETS</h2>
         <nav>
             <ul>
                 <li><a href="../index.html">INICIO</a></li>
 
                 <li><a href="#">TICKETS</a></li>
 
-                <li><a href="insumos.html">INSUMOS</a></li>
+                <li><a href="../pages/insumos.html">INSUMOS</a></li>
 
                 <li><a href="soluciones.html">SOLUCIONES</a></li>
-
+                
                 <li><a href="contactos.html">CONTACTOS</a></li>
             </ul>
         </nav>
     </header>
-
-    <!--ESTRUCTURA Nº2= MAIN contenido del sitio: imagenes, parrafos, links, formularios-->
+    <!-- ESTRUCTURA Nº2= MAIN contenido del sitio -->
     <main>
-        <h1>tickets</h1>
-    </main>
+        <h1>Tickets</h1>
+        <!-- Sección de tickets abiertos -->
+        <section>
+            <h2>Tickets Abiertos</h2>
+            <ul>
+                <li>Ticket #001 - Pc no tiene internet</li>
+                <li>Ticket #002 - Impresora no imprime</li>
+                <!-- Más tickets abiertos -->
+            </ul>
+        </section>
 
-    <!--ESTRUCTURA Nº3= FOOTER derechos de autos, links, iconos-->
-    <footer>
-    </footer>
-</body>
-</html>
+        <!-- Sección de tickets cerrados -->
+        <section>
+            <h2>Tickets Cerrados</h2>
+            <ul>
+                <li>Ticket #003 - mouse roto</li>
+                <li>Ticket #004 - telefono no anda</li>
+                <!-- Más tickets cerrados -->
+            </ul>
+        </section>
+
+        <!-- Sección de tickets en espera -->
+        <section>
+            <h2>Tickets en Espera</h2>
+            <ul>
+                <li>Ticket #005 - cambio de monitor</li>
+                <li>Ticket #006 - pos no pasa tarjetas</li>
+                <!-- Más tickets en espera -->
+            </ul>
+        </section>
+
+        <!-- Botón para crear un nuevo ticket -->
+        <section>
+            <h2>Crear un nuevo Ticket</h2>
+            <button onclick="window.location.href='crear_ticket.html';">Crear Ticket</button>
+        </section>
+    </main>

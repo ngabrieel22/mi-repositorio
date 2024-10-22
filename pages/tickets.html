@@ -29,42 +29,78 @@
             </ul>
         </nav>
     </header>
+
     <!-- ESTRUCTURA Nº2= MAIN contenido del sitio -->
     <main>
         <h1>Tickets</h1>
-        <!-- Sección de tickets abiertos -->
-        <section>
-            <h2>Tickets Abiertos</h2>
-            <ul>
-                <li>Ticket #001 - Pc no tiene internet</li>
-                <li>Ticket #002 - Impresora no imprime</li>
-                <!-- Más tickets abiertos -->
-            </ul>
-        </section>
 
-        <!-- Sección de tickets cerrados -->
-        <section>
-            <h2>Tickets Cerrados</h2>
-            <ul>
-                <li>Ticket #003 - mouse roto</li>
-                <li>Ticket #004 - telefono no anda</li>
-                <!-- Más tickets cerrados -->
-            </ul>
-        </section>
+        <!-- Acordeón de tickets -->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <!-- Tickets Abiertos -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Tickets Abiertos
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Ticket #001 - Pc no tiene internet</li>
+                            <li>Ticket #002 - Impresora no imprime</li>
+                            <!-- Más tickets abiertos -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Sección de tickets en espera -->
-        <section>
-            <h2>Tickets en Espera</h2>
-            <ul>
-                <li>Ticket #005 - cambio de monitor</li>
-                <li>Ticket #006 - pos no pasa tarjetas</li>
-                <!-- Más tickets en espera -->
-            </ul>
-        </section>
+            <!-- Tickets Cerrados -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Tickets Cerrados
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Ticket #003 - mouse roto</li>
+                            <li>Ticket #004 - telefono no anda</li>
+                            <!-- Más tickets cerrados -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tickets en Espera -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Tickets en Espera
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Ticket #005 - cambio de monitor</li>
+                            <li>Ticket #006 - pos no pasa tarjetas</li>
+                            <!-- Más tickets en espera -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Botón para crear un nuevo ticket -->
         <section>
             <h2>Crear un nuevo Ticket</h2>
-            <button onclick="window.location.href='crear_ticket.html';">Crear Ticket</button>
+            <button class="btn btn-primary" onclick="window.location.href='crear_ticket.html';">Crear Ticket</button>
         </section>
     </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
